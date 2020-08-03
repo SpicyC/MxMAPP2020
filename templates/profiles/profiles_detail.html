@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<button><a class="add" href="{% url 'list_profiles' %}">Return to Networking Directory</a></button>
+
+      <div class="detail_page"> "{{ profile.name }}" </div>
+      <img class="image" src="{{ profile.image_url }}" >
+      <div class="location"> "{{ profile.location }}
+        {% if profile.position %}
+         <div>{{ profile.position }}</div>
+        {% endif %}</div>
+        
+        
+
+      
+    </div>
+    <button class="button2"><a class="profilesstuff"
+           href="{% url 'edit_profiles' pk=profile.pk %}"> Edit Profile </a></button>
+    <button><a class="add" href="{% url 'list_profiles' %}">Return to Networking Directory</a></button>
+
+
+
+{% endblock %}
