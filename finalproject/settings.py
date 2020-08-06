@@ -29,9 +29,9 @@ SECRET_KEY = 'q&9o*#pas-)7qc_vlsqlj5bk9sq6qt@9kwc8&&c)8hjo3u+$-z'
 DEBUG = True
 
 ALLOWED_HOSTS = ['myfinalproject-1--spicyc.repl.co', 'myfinalproject-1--spicyc.repl.co',
-'mxmapp--spicyc.repl.co','mxmapp--mikeabraha.repl.co', 'mxmapp--brandilove.repl.co', 'mxmapp2020--spicyc.repl.co', 'mxmapp2020.spicyc.repl.co',
-
+'mxmapp--spicyc.repl.co','mxmapp--mikeabraha.repl.co', 'mxmapp--brandilove.repl.co', 'mxmapp.brandilove.repl.co','mxmapp2020--spicyc.repl.co', 'mxmapp2020.spicyc.repl.co',
 ]
+
 
 
 
