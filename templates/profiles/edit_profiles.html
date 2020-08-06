@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<button ><a class="add" href="{% url 'list_profiles' %}">Return to Profiles</a></button>
+
+<h1>Edit Profiles</h1>
+
+<div>
+
+  <form action="{% url 'edit_profiles' pk=profile.pk %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+      <button type="submit">Update Profile</button>
+      <button><a class="add" href="{% url 'list_profiles' %}">return to All Profiles</a></button>
+    </div>
+  </form>
+</div>
+{% endblock %}
