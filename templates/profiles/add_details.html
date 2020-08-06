@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1><strong>Profiles</strong></h1>
+    <p><button><a class="add" href="{% url 'add_profiles' %}">Add New Profile</a></button></p>
+    <button><a class="add" href="{% url 'list_profiles' %}">Profiles</a></button>
+
+  <div class="everything">
+          
+          
+        
+          <p>
+          <button class="button2"><a class="profilesstuff" href="{% url 'profiles_detail' pk=profile.pk %}">Profile Details</a></button>
+          
+          <button class="button2"><a class="profilesstuff"
+           href="{% url 'edit_profiles' pk=profile.pk %}"> Edit Profile </a></button>
+          
+          <button class="button2"> <a class="profilesstuff" href="{% url 'delete_profile' pk=profile.pk %}">Delete Profile</a></button>
+          </p></h4>
+          
+          </div>
+
+          <br>
+          {% endfor %}
+       
+
+<button class="button2"> <a class="profilesstuff" href="{% url 'delete_profile' pk=profile.pk %}">Delete Album</a></button>
+
+
+
+  </div>
+
+{% endblock %}
