@@ -1,12 +1,15 @@
-{% extends "base.html" %}
-
-load static
-
+{%extends "base.html" %}
+{%load static%}
 {% block content %}
 
-    <h1><strong>All Profiles</strong></h1>
-    <p><button><a class="add" href="{% url 'add_profiles' %}">Add New Profile</a></button>
-    
+<h1><strong>All Profiles</strong></h1>
+
+
+<center>
+<p><button><a class="add" href="{% url 'add_profiles' %}">Add New Profile</a></button>
+
+<button><a href="{% url 'learninglinks' %}">Learning Links</a></button>
+</center>    
 
 
 <div class="everything">
@@ -19,7 +22,7 @@ load static
           
         <img src="{{ profile.image_url }}" height='200' width='250'>
         <h4>, {{ profile.position }}</h4>
-        <p> @ {{ profile.company }}</p>
+        <p>  {{ profile.company }}</p>
         
         <p>
             <button class="button2"><a class="profilesstuff" href="{% url 'profiles_detail' pk=profile.pk %}">Profile Details</a></button>

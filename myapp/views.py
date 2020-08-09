@@ -12,6 +12,9 @@ def index(request):
   
   return render(request, 'profiles/list_profiles.html', context={'profiles':all_profiles})
   
+def learninglinks (request):
+      return render(request,'profiles/learninglinks.html')
+   
 
 def add_profiles(request):
     if request.method == 'GET':
@@ -31,14 +34,9 @@ def delete_profile(request, pk):
         
         return JsonResponse({"deleted": 'true'})
         
-
-
 def profiles_detail(request, pk):
   profile = get_object_or_404(Profile, pk=pk)
   return render(request, "profiles/profiles_detail.html", {"profile": profile})
-
-
-
 
 
 def edit_profiles(request, pk):
