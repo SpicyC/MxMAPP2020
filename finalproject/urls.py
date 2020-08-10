@@ -38,9 +38,10 @@ urlpatterns = [
 
     path('profiles/<int:pk>/detail/', profile_views.profiles_detail, name='profiles_detail'), 
 
+    path('profiles/learninglinks',profile_views.learninglinks,name='learninglinks' ),
 
-    path('', CalendarView.as_view(),
-    name='calendarview'),
-
+    path('profiles/aboutus',profile_views.aboutus,
+    name='aboutus')
 
 ]
+
