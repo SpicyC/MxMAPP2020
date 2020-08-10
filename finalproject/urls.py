@@ -18,6 +18,13 @@ from django.conf import settings
 from django.urls import include, path
 from myapp import views as profile_views
 
+
+from events.views import CalendarView
+
+
+    
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -35,5 +42,6 @@ urlpatterns = [
 
     path('profiles/aboutus',profile_views.aboutus,
     name='aboutus')
+
 ]
 
