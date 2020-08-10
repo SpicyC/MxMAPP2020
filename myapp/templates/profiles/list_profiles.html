@@ -1,0 +1,53 @@
+{%extends "base.html" %}
+{%load static%}
+{% block content %}
+
+<h1><strong>All Profiles</strong></h1>
+
+
+
+<div class="nav">
+    
+ <p><a class="add" href="{% url 'add_profiles' %}">Add New Profile</a>
+  
+ <a href="{% url 'learninglinks' %}">Learning Links</a>
+
+ <a href="{% url 'aboutus' %}">About Us</a>
+ 
+</div>
+
+
+    
+
+
+<div class="everything">
+          
+    {% for profile in profiles %}
+
+<div class="flex">
+         
+    <h2> "{{ profile.name }}" </h2>
+          
+    <img src="{{ profile.image_url }}" height='200' width='250'>
+    <h4>, {{ profile.position }}</h4>
+    <p>  {{ profile.company }}</p>
+    <br>
+        
+        <p>
+            <button class="button2"><a class="profilesstuff" href="{% url 'profiles_detail' pk=profile.pk %}">Profile Details</a></button>
+
+            <button class="button2"><a class="profilesstuff"
+            href="{% url 'edit_profiles' pk=profile.pk %}">Edit Profile</a></button>
+
+            <button class="delete_alert"><a class= "delete" href="{% url 'delete_profile' pk=profile.pk %}">Delete Profile</a></button>
+
+
+        </p>
+<br>          
+</div>
+
+    {% endfor %}
+       
+</div>
+
+{% endblock %}
