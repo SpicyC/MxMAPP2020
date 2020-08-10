@@ -58,3 +58,9 @@ img{
   background-color: black;
   color: white;
 }
+
+.par1{
+ border: 2px orange;
+ background-color: white;
+ flex-flow: column;
+}
