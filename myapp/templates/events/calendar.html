@@ -1,0 +1,24 @@
+<!-- {'% extends 'base.html' %}
+
+{'% block content %}
+{'{ calendar }}
+{'% endblock %} -->
+
+
+{%extends "events/base.html" %}
+{%load static%}
+{% block content %}
+
+<body>
+    <p><button><a class="add" href="{% url 'calendarview' %}"> events</a></button>
+
+<a href="{% url 'calendarview' %}?{{ prev_month }}"> Previous Month </a><a href="{% url 'calendarview' %}?{{ next_month }}"> Next Month </a>
+{{ calendar }}
+
+</body>
+
+
+{% endblock %}
+
+
+

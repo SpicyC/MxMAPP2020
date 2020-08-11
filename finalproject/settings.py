@@ -35,6 +35,8 @@ ALLOWED_HOSTS = [
   'mxmapp2020.brandilove.repl.co',
   'mxmapp2020--spicyc.repl.co',
   'mxmapp2020.spicyc.repl.co',
+  '10.128.1.174',
+  
 ]
 
 

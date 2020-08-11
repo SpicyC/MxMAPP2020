@@ -28,6 +28,16 @@ from events.views import CalendarView
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+
+# path(r'^calendar/$', views.Calendar.as_view(), 
+# name='calendar'),
+
+path('', CalendarView.as_view(),
+    name='calendarview'),
+
+
+
+
     path('', profile_views.index, name='list_profiles'),
 
     path('profiles/add_profiles', profile_views.add_profiles, name='add_profiles'),
@@ -41,7 +51,12 @@ urlpatterns = [
     path('profiles/learninglinks',profile_views.learninglinks,name='learninglinks' ),
 
     path('profiles/aboutus',profile_views.aboutus,
-    name='aboutus')
+    name='aboutus'),
+
+    # path('CalendarView', include('.urls', namespace='calendar')),
+
+    # path('', include('calendar')),
 
 ]
+
 
