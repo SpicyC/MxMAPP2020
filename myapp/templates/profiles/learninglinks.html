@@ -1,39 +1,70 @@
 {%extends "base.html" %}
 {%load static%}
 {% block content %}
-<body>
-<p><button><a class="add" href="{% url 'add_profiles' %}">Add New Profile</a></button>
-
-<div class= "img1"
-<img src= "html2.jpg" alt="pic">
-</div>
-
-<div class= "par1"
-<p>
-<h2>HTML</h2> 
-<img src= "html2.jpg" >
-<h4> Here are tools to help you learn and use HTML! 
-    <br>
-Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
-</br>
-</h4>
-</div>
-
-
-<div class= "par2"
-<p>
-<h2>CSS</h2>
-
-<h4> Here are tools to help you learn and use CSS!
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 
 
 
-</body>
+  </head>
+  <body>
+  <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+            <figure class= "image is-50x50">
+                <img src="templates/pictures/learninglinks.jpg" style="max-width: 212px">
+      <h1 class="title">
+        Learning Links
+      </h1>
+      <p class="subtitle">
+        Learn all about your favorite <strong>Languages</strong>!
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+      <img src="pictures/html2.jpg" style="max-width: 212px">
+        <div class="columns is-vcentered">
+            <div class="column is-8">
+                <div class="notification">
+
+                  <p>HTML Hypertext Markup Language (HTML) is the standard markup language for  documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document. HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page.HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links,quotes and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as img and input directly introduce content into the page. Other tags such as p surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page.
+                 </p>
+
+                        <div class="buttons are-medium">
+                            
+                                <button class="button"> Projects</a>w3 Schools Examples
+                                <a href="https://www.w3schools.com/html/default.asp">
+                                </button> 
+                            </div>
+
+                            <button class="button">Medium</button>
+                            <button class="button">Size</button>
+
+                    </div>    
+                </div>
+            </div>
+        </div>  
+
+        <div class="column">
+            <div class="notification">Second column with more content. This is so you can see the vertical alignment.</div>
+        </div>
+    <div class="column">
+            <div class="notification">Second column with more content. This is so you can see the vertical alignment.</div>
+        </div>
 
 
 
 
+  </body>
+</html>
 
 
 
