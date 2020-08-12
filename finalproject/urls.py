@@ -14,18 +14,30 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.conf import settings
+admin.autodiscover()
+# from django.conf import url
 from django.urls import include, path
 from myapp import views as profile_views
 
+from cal import views
 
-from events.views import CalendarView
+# url patterns = patterns('',
+#     url(r'^cal/admin/', include('django.contrib.cal.urls')
+#     url(r'^cal/'', include(admin.site.urls)),
+
+#     )
 
 
-    
 
 
 urlpatterns = [
+#help w/ urls
+    # path(r'^', include('finalproject.urls')),
+
+    # path(r'^cal/', include('cal.urls', namespace='cal')),
+
+#help w/ urls
+
     path('admin/', admin.site.urls),
 
     path('', profile_views.index, name='list_profiles'),
@@ -41,7 +53,12 @@ urlpatterns = [
     path('profiles/learninglinks',profile_views.learninglinks,name='learninglinks' ),
 
     path('profiles/aboutus',profile_views.aboutus,
-    name='aboutus')
+    name='aboutus'),
+
+
 
 ]
+
+
+
 
