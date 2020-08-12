@@ -19,7 +19,7 @@ from django.urls import include, path
 from myapp import views as profile_views
 
 
-from events.views import CalendarView
+# from events.views import CalendarView
 
 
     
