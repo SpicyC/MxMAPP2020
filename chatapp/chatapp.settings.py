@@ -8,6 +8,3 @@ from twilio.jwt.access_token.grants import (
     SyncGrant,
     ChatGrant
 )
-
-def app(request):
-    return render(request, 'twilio/index.html')
