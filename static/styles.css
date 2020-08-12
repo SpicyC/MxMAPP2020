@@ -64,3 +64,24 @@ img{
  background-color: white;
  flex-flow: column;
 }
+
+.links{   
+ background-color: orange;
+ flex-flow: column;
+}
+.links1{   
+ background-color: rgb(11, 174, 250);
+ flex-flow: column;
+}
+.links2{   
+ background-color: yellow;
+ flex-flow: column;
+}
+.links3{   
+ background-color: rgb(0, 89, 255);
+ flex-flow: column;
+}
+.links4{   
+ background-color: green;
+ flex-flow: column;
+}

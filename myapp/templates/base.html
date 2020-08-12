@@ -2,9 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+ 
   <title>Profiles Page</title>
   
  <link rel="stylesheet"
@@ -15,9 +18,21 @@
  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter"/>
 
  <base href="/">  
+
 </head>
 <center>
-<h1>M@M APP</h1>
+<img src="https://rb.gy/uyfyz9" alt="logo1" style:"max-width: 25px">
+<div class="nav">
+    
+ <p>
+ <a href="{% url 'list_profiles' %}">My Networking Directory</a>
+    
+ <a href="{% url 'add_profiles' %}">Add New Profile</a>
+  
+ <a href="{% url 'learninglinks' %}">Learning Links</a>
+
+ <a href="{% url 'aboutus' %}">About Us</a>
+</div>
 </center>
 <body class="sans-serif pv3 ph2">
   <div class="mw9 center">

@@ -9,7 +9,7 @@ class profileForm(forms.ModelForm):
             'location',
             'position',
             'image_url',
-            'company',
+            'Bio',
         ]
       
 
