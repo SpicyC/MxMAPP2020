@@ -16,8 +16,7 @@ class Profile(models.Model):
     
     
     class Meta:
-      order_with_respect_to = 'name'
+        order_with_respect_to = 'name'
 
-    def __str__(self):
-learning/aboutus-update
-      return f"{self.name} {self.position} @ {self.company}"
+    def __str__(self): 
+        return f"{self.name} {self.position} {self.company}"

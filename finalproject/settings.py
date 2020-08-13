@@ -29,12 +29,12 @@ SECRET_KEY = 'q&9o*#pas-)7qc_vlsqlj5bk9sq6qt@9kwc8&&c)8hjo3u+$-z'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-  'mxmapp2020.mikeabraha.repl.co',
-  'mxmapp2020--mikeabraha.repl.co',
-  'mxmapp2020--brandilove.repl.co',
-  'mxmapp2020.brandilove.repl.co',
-  'mxmapp2020--spicyc.repl.co',
-  'mxmapp2020.spicyc.repl.co',
+  'mxmapp2020-1.mikeabraha.repl.co',
+  'mxmapp2020-1--mikeabraha.repl.co',
+  'mxmapp2020-1--brandilove.repl.co',
+  'mxmapp2020-1.brandilove.repl.co',
+  'mxmapp2020-1--spicyc.repl.co',
+  'mxmapp2020-1.spicyc.repl.co',
 ]
 
 
