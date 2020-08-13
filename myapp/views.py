@@ -6,14 +6,7 @@ from .models import Profile
 
 from .forms import profileForm
 
-#Calendar Views
-from datetime import datetime
 
-from django.views import generic
-from django.utils.safestring import mark_safe
-
-from .models import *
-from events.utils import Calendar
 
 # Create your views here.
 
@@ -69,33 +62,3 @@ def edit_profiles(request, pk):
 
     return render(request, "profiles/edit_profiles.html", {
         "form": form, "profile": profile})
-
-
-
-#Calendar Views
-
-
-
-class CalendarView(generic.ListView):
-    model = Event
-    template_name = 'events/calendar.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-
-        # use today's date for the calendar
-        d = get_date(self.request.GET.get('day', None))
-
-        # Instantiate our calendar class with today's year and date
-        events = Calendar(d.year, d.month)
-
-        # Call the formatmonth method, which returns our calendar as a table
-        html_events = events.formatmonth(withyear=True)
-        context['calendar'] = mark_safe(html_events)
-        return context
-
-def get_date(req_day):
-    if req_day:
-        year, month = (int(x) for x in req_day.split('-'))
-        return date(year, month, day=1)
-    return datetime.today()

@@ -1,41 +1,25 @@
-# from django.shortcuts import render
-
-# from django.http import HttpResponse
-
-# Create your views here.
-
-#def index(request):
-#     return HttpResponse('hello')
-
-from datetime import datetime
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.views import generic
-from django.utils.safestring import mark_safe
-
-from .models import *
 from .utils import Calendar
 
-class CalendarView(generic.ListView):
+from .models import Event
+
+class CalendarView():
     model = Event
-    template_name = 'events/calendar.html'
+    template_name = 'components/calendar.html'
+    #success_url = reverse_lazy("calendar")
 
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, **kwargs): 
         context = super().get_context_data(**kwargs)
+    
+        d = get_date(self.request.GET.get('month', None))
+    
+        cal = Calendar(d.year, d.month)
+    
+        html_cal = cal.formatmonth(withyear=True)
+        context['calendar'] = mark_safe(html_cal)
+        context['prev_month'] = prev_month(d)
+        context['next_month'] = next_month(d)
 
-        # use today's date for the calendar
-        d = get_date(self.request.GET.get('day', None))
-
-        # Instantiate our calendar class with today's year and date
-        events = Calendar(d.year, d.month)
-
-        # Call the formatmonth method, which returns our calendar as a table
-        html_events = events.formatmonth(withyear=True)
-        context['calendar'] = mark_safe(html_events)
         return context
 
-def get_date(req_day):
-    if req_day:
-        year, month = (int(x) for x in req_day.split('-'))
-        return date(year, month, day=1)
-    return datetime.today()
+
+
