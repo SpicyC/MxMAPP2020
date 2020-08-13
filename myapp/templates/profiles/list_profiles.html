@@ -12,21 +12,23 @@
          
     <h1> {{ profile.name }} </h1>
           
-    <img src="{{ profile.image_url }}" height='200' width='250'>
+    <img class="img2" src="{{ profile.image_url }}" height='200' width='250'>
     <h4> {{ profile.position }}</h4>
     <p>  {{ profile.company }}</p>
     <br>
         
-        <p>
+        <p class="button3" >
+               
             <button class="button2"><a class="profilesstuff" href="{% url 'profiles_detail' pk=profile.pk %}">Profile Details</a></button>
 
             <button class="button2"><a class="profilesstuff"
             href="{% url 'edit_profiles' pk=profile.pk %}">Edit Profile</a></button>
 
             <button class="delete_alert"><a class= "delete" href="{% url 'delete_profile' pk=profile.pk %}">Delete Profile</a></button>
-
+            
 
         </p>
+        
 <br>          
 </div>
 

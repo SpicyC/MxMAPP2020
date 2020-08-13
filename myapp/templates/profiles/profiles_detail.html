@@ -5,7 +5,7 @@
 <button><a class="add" href="{% url 'list_profiles' %}">Return to Networking Directory</a></button>
 
       <div class="detail_page"> <h1>{{ profile.name }}</h1> </div>
-      <img class="image" src="{{ profile.image_url }}" >
+      <img class="image2" src="{{ profile.image_url }}" >
       <div class="location"> {{ profile.position }}
         {% if profile.position %}
          <div class="bio">{{ profile.Bio }}</div>

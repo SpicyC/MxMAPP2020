@@ -9,8 +9,31 @@ body { background-color:aqua
   flex-direction: row;
   justify-content: space-around;
   border: royalblue 10px solid;
+  background-color: white;
 
 }
+
+.everything2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  border: royalblue 10px solid;
+  background-color: black;
+
+}
+
+.vids {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  border: royalblue 10px solid;
+  background-color: white;
+
+}
+
+
 
 
 .flex {
@@ -24,7 +47,7 @@ body { background-color:aqua
   height: 500px;
   border-radius: 10%;
   background:rgb(192, 250, 250);
-  text-align: justify;
+  text-align: center;
   text-justify: inter-word;
 
 }
@@ -33,7 +56,17 @@ img{
   margin-right: auto;
   width: 350px;
   border-radius: 25%;
+ 
 }
+
+img.img2{
+     margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  border-radius: 25%;
+  height: 315px;
+}
+
 
 .nav {
   overflow: visible;
@@ -68,20 +101,25 @@ img{
 .links{   
  background-color: orange;
  flex-flow: column;
+ border: white 5px solid;
 }
 .links1{   
  background-color: rgb(11, 174, 250);
  flex-flow: column;
+ border: white 5px solid;
 }
 .links2{   
  background-color: yellow;
  flex-flow: column;
+ border: white 5px solid;
 }
 .links3{   
  background-color: rgb(0, 89, 255);
  flex-flow: column;
+ border: white 5px solid;
 }
 .links4{   
  background-color: green;
  flex-flow: column;
+ border: white 5px solid;
 }
