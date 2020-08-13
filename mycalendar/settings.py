@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['calendar--spicyc.repl.co',
 'calendar.spicyc.repl.co',
+'mxmapp2020-3--spicyc.repl.co',
 
 ]
 
