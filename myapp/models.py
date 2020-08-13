@@ -1,3 +1,8 @@
+
+
+#Calendar
+from __future__ import unicode_literals
+
 from django.db import models
 
 # Create your models here.
@@ -14,4 +19,5 @@ class Profile(models.Model):
       order_with_respect_to = 'name'
 
     def __str__(self):
+learning/aboutus-update
       return f"{self.name} {self.position} @ {self.company}"
