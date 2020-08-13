@@ -4,11 +4,11 @@
 
 <button><a class="add" href="{% url 'list_profiles' %}">Return to Networking Directory</a></button>
 
-      <div class="detail_page"> "{{ profile.name }}" </div>
-      <img class="image" src="{{ profile.image_url }}" >
-      <div class="location"> "{{ profile.position }}
+      <div class="detail_page"> <h1>{{ profile.name }}</h1> </div>
+      <img class="image2" src="{{ profile.image_url }}" >
+      <div class="location"> {{ profile.position }}
         {% if profile.position %}
-         <div>{{ profile.position }}</div>
+         <div class="bio">{{ profile.Bio }}</div>
         {% endif %}</div>
         
         
